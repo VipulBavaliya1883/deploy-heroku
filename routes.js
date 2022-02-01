@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Movie = require('./Models/Movie')
 
-
-
-
-
 //to fetch movies
 router.get('/movies',async(req,res)=>{
     const imovie = await Movie.find()
@@ -73,19 +69,5 @@ router.delete("/movies/:name",async(req,res)=>{
 
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router 
